@@ -1,0 +1,72 @@
+<html lang="en">
+
+<head>
+    <title>Keyboard Keys</title>
+</head>
+
+<body style="text-align:center;">
+    <h1 style="font-size: 50px;">𝓚𝓮𝔂𝓫𝓸𝓪𝓻𝓭 𝓚𝓮𝔂𝓼</h1>
+    <p id="note" style="font-size: 40px;">🅽🅾🆃🅴: ℙℝ𝔼𝕊𝕊 𝔸ℕ𝕐 𝕂𝔼𝕐𝔹𝕆𝔸ℝ𝔻 𝕂𝔼𝕐</p>
+    <h2 id="keytype"></h2>
+</body>
+<style>
+    body{
+        background: linear-gradient(white 0%, purple 100%);
+    }
+
+    #note{
+        color:black;
+    }
+
+    h2 {
+    border: ridge 50px;
+    border-color: rebeccapurple;
+    font-size:75px;
+    font-family: cursive;
+    text-align: center;
+    width: 80%;height:350px;
+    background-color:violet;
+    padding-top: 260px;
+    margin:100px;
+    }
+</style>
+<script>
+    var Show = document.getElementById("keytype");
+   
+    window.addEventListener("keydown", key_press);
+
+    function key_press(e){
+        kp = e.keyCode;
+        if (kp>= 65 && kp<=90){
+            Show.innerHTML = "Alphabet Key";
+        }
+        if (kp>= 97 && kp<=122){
+            Show.innerHTML = "Alphabet Key";
+        }
+        if (kp>= 48 && kp<=57){
+            Show.innerHTML = "Number Key";
+        }
+        if (kp>= 37 && kp<=40){
+            Show.innerHTML = "Arrow Key";
+        }
+        if (kp == 27){
+            Show.innerHTML = "Esc Key";
+        }
+        if (kp == 18){
+            Show.innerHTML = "Alt Key";
+        }
+        if (kp == 17){
+            Show.innerHTML = "Ctrl Key";
+        }
+        if (kp == 13){
+            Show.innerHTML = "Enter Key";
+        }
+        if (kp == 16){
+            Show.innerHTML = "Shift Key";
+        }
+        if (kp == 46){
+            Show.innerHTML = "Delete Key";
+        }
+    }
+</script>
+</html>
